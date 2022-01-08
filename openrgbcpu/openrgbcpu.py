@@ -16,6 +16,7 @@ class OpenRGBCPU:
 
     def connect(self):
         """Connect to OpenRGB server"""
+        # TODO: Show error if server is down
         self.config = Config() 
         self.client = OpenRGBClient(address=self.config.server_IP, port=self.config.server_port)
         
