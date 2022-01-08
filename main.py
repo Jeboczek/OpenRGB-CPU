@@ -1,4 +1,4 @@
-from OpenRGBCpu.openrgbcpu import OpenRGBCPU
+from openrgbcpu.openrgbcpu import OpenRGBCPU
 
 if __name__ == "__main__":
     cl = OpenRGBCPU()
