@@ -13,6 +13,11 @@ class TestConfig(TestCase):
         conf = Config()
         self.assertEqual(conf.server_port, 11111)
 
+    @mock.patch.dict(os.environ, {"COLOR_HUE": "100"})
+    def test_config_color_hue(self):
+        conf = Config()
+        self.assertEqual(conf.color_hue, 100)
+
     @mock.patch.dict(os.environ, {"DEVICE_NAME": "TEST_DEVICE"})
     def test_config_device_name(self):
         conf = Config()
