@@ -25,6 +25,8 @@ class OpenRGBCPU:
             self.device = [device for device in self.client.devices if device.name.lower() == self.config.device_name.lower()][0]
         except IndexError:
             self._show_error_with_no_selected_device()
+        
+        print("Connected")
 
 
     def _show_error_with_no_selected_device(self):
