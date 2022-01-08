@@ -20,6 +20,8 @@ class OpenRGBCPU:
         self.client = OpenRGBClient(address=self.config.server_IP, port=self.config.server_port)
         
         try:
+            if self.config.device_name is None:
+                raise IndexError()
             self.device = [device for device in self.client.devices if device.name.lower() == self.config.device_name.lower()][0]
         except IndexError:
             self._show_error_with_no_selected_device()
@@ -34,7 +36,7 @@ class OpenRGBCPU:
         sys.exit(-1)
 
 
-    def update_color(self, cpu_measure_time : int = 1):
+    def update_color(self, cpu_measure_time : int = 0.5):
         if self.connect is None:
             print("You need to connect first")
         else:
