@@ -5,7 +5,7 @@ Highlight your leds relative to CPU usage.
 ### Linux
 After cloning project from github.
 ```
-git clone https://github.com/Jeboczek/OpenRGB-CPU
+git clone https://github.com/pawl0wski/OpenRGB-CPU
 ```
 You can make Python's virtual env or you can skip this step if you want.
 ```
